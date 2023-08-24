@@ -1,0 +1,24 @@
+POST http://localhost:3000/api/user/
+content-type: application/json  
+
+{     
+    "username": "usernameTeste",     
+    "password": "123" ,
+    "nome": "testeNome",
+    "email": "teste@gmail.com"
+
+}
+
+###
+POST {{hostname}}api/auth/login
+content-type: application/json  
+
+{     
+    "username": "usernameTeste",     
+    "password": "123" 
+}
+
+###
+GET {{hostname}}api/filme/
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTI4MzY1MDksImV4cCI6MTY5Mjg1MDkwOX0.6rem23IK2pYi3VOIZL6vVkGDqroYgCMEYWUWTi8Y-xE
+refreshtoken:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTI4MzY1MDl9.3OJUr70VxDqOZI61GiUn0VMHSJGoMnmrSWiRqOB3LM8
