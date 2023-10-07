@@ -2,10 +2,10 @@ POST http://localhost:3000/api/user/
 content-type: application/json  
 
 {     
-    "username": "usernameTeste",     
+    "username": "vex",     
     "password": "123" ,
-    "nome": "testeNome",
-    "email": "teste@gmail.com"
+    "nome": "leo",
+    "email": "leomarraoo@gmail.com"
 
 }
 
@@ -20,5 +20,21 @@ content-type: application/json
 
 ###
 GET {{hostname}}api/filme/
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTI4MzY1MDksImV4cCI6MTY5Mjg1MDkwOX0.6rem23IK2pYi3VOIZL6vVkGDqroYgCMEYWUWTi8Y-xE
-refreshtoken:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTI4MzY1MDl9.3OJUr70VxDqOZI61GiUn0VMHSJGoMnmrSWiRqOB3LM8
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTUyNjE1NDR9.HZIyoWtN48xY4ixafLwmATa8lJzK0RbfQOtXg87R7sE
+refreshtoken:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTUyNjE1NDQsImV4cCI6MTY5NTI3NTk0NH0.oghIrw8-PaiCuR_aHZqcpGNjXVixP1Vnb6x2LaA6JWI
+
+###
+
+POST {{hostname}}api/filme/
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTM5NjA0MDQsImV4cCI6MTY5Mzk3NDgwNH0.ek0igAk3GnZSkhVrs5tfNXRZt49EW2B_yQLtf7a6JZo
+refreshtoken:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiY2ExMjljZGMtOTMyZC00YTk0LWEyZDYtNzZlM2ZkMWUzNTk3IiwidXNlcm5hbWUiOiJ1c2VybmFtZVRlc3RlIiwidGlwbyI6InVzZXIiLCJpYXQiOjE2OTM5NjA0MDR9.ZsAybWKRScZmwaDvaOVJpzkQ4tpLgsQjWy_dU4MS7sk
+content-type: application/json 
+
+{
+    "nome": "filmeInserido2",
+    "data_lancamento": "06-07-2023",
+    "data_vista": "11-12-2023",
+    "nota": 5,
+    "sinopse": "mais um filme merda, quem diria2222222",
+    "genero": "terror2222"
+}

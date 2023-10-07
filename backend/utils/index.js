@@ -24,7 +24,7 @@ async function refreshToken(user, refresh_token){
             if(value == 0) {
                 reject({code: 401, message: "Token inválido."});
             } else {
-                let access_token = jwt.sign(user, process.env.ACCESS_SECRET, {expiresIn: '240m'});
+                let access_token = jwt.sign(user, process.env.ACCESS_SECRET, {expiresIn: '600m'});
                 resolve(access_token);
             }
         })

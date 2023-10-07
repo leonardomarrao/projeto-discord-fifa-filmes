@@ -1,17 +1,24 @@
 import React from 'react'
-import LoginForm from '../components/LoginForm'
+import LoginForm from '../components/Login/LoginForm.jsx'
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import '../css/LoginStyles.css'
+import video from 'D:/Github/projeto-discord-fifa-filmes/frontend/pnafg-hub/assets/videoLogin.mp4'
+
 
 const Login = () => {
   let navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.stringify(localStorage.getItem("user"));
+  const refresh_token = JSON.parse(localStorage.getItem("refresh_token"));
+  const access_token = JSON.parse(localStorage.getItem("access_token"));
   
   useEffect(() => {
-    if(user.user != null && user.refresh_token != null && user.access_token != null) {
+    if(user != null) {
+      if(user != null && access_token != null && refresh_token != null) {
         navigate('/');
+      }
     }
   },[])
   
@@ -21,8 +28,12 @@ const Login = () => {
       password: password
     })
     .then((res) => {
-      localStorage.setItem('user', JSON.stringify(res.data))
-      navigate("/")
+      console.log(res.data.refresh_token)
+      localStorage.setItem('user', JSON.stringify(res.data.user))
+      localStorage.setItem('refresh_token', JSON.stringify(res.data.refresh_token))
+      localStorage.setItem('access_token', JSON.stringify(res.data.access_token))
+      
+      navigate("/movies")
     })
     .catch((err) => {
       //modal dizendo o erro
@@ -31,9 +42,18 @@ const Login = () => {
 }
 
   return (
-    <div>
-        <LoginForm func={loginFunc}></LoginForm>
+    <div className="page">
+      <div className='loginPage'>
+          <div className="leftside">
+            <video src={video} autoPlay loop muted />
+          </div>
+          <div className="rightside">
+            
+            <LoginForm func={loginFunc}></LoginForm>
+          </div>
+      </div>
     </div>
+    
   )
 }
 

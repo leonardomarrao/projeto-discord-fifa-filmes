@@ -1,0 +1,5 @@
+branco - 255,255,255
+verde-claro 9,270, 177
+verde-escuro - 10, 120, 98
+cinza - 22, 22, 22
+preto - 0,0,0

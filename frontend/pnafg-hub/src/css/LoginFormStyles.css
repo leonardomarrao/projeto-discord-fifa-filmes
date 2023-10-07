@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Lato-Black';
+    src: local('Lato-Black'), url('../assets/fonts/Lato-Black.ttf') format('truetype');
+  }
+
+.loginBox {
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Lato-Black';
+    box-shadow: 10px;
+}
+
+.loginBox p {
+    font-size: 30px;
+}
+
+.txt_field {
+    font-size: 25px;
+    padding: 15px;
+}
+
+.txt_field input {
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+.inputBox {
+    padding-top: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 1px;
+    font-size: 35px;
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    font-family: 'Lato-Black';
+    background-color: transparent;
+    color: #000000;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #000000 1px;
+    padding: 3px 10px;
+}
+.inputBox::placeholder {
+    font: 1.25rem/3 sans-serif;
+    font-family: 'Lato-Black';
+}
+
+.buttonBox {
+    margin-top: 15px;
+}
+
+.buttonBox button {
+    height: fit-content;
+    width: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Lato-Black';
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
