@@ -55,12 +55,12 @@ const Movie = () => {
     },
       data: {
         nome: movie.title,
-        data_lancamento: movie.releaseDate,
-        data_vista: movie.dataSeen,
+        data_lancamento: movie.data_lancamento,
+        data_vista: movie.data_vista,
         nota: movie.grade,
         sinopse: movie.description,
         genero: movie.genre,
-        poster: movie.image
+        poster: movie.poster
       }
     })
     .then((res) => {
