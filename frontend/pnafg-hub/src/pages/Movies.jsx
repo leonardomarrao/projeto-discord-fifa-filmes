@@ -45,7 +45,6 @@ const Movie = () => {
   }
 
   const movieIns = (movie) => {
-    console.log(movie)
     Axios({
       method: 'post',
       url: 'http://localhost:3000/api/filme/',
@@ -64,12 +63,9 @@ const Movie = () => {
       }
     })
     .then((res) => {
-      console.log(res)
-      //localStorage.setItem('user', JSON.stringify(res.data.user))
-      //localStorage.setItem('refresh_token', JSON.stringify(res.data.refresh_token))
-      //localStorage.setItem('access_token', JSON.stringify(res.data.access_token))
-      
-      movies.push(movie);
+      localStorage.setItem('user', JSON.stringify(res.data.user))
+      localStorage.setItem('access_token', JSON.stringify(res.data.access_token))
+      getMovies();
     })
     .catch((err) => {
       //modal dizendo o erro

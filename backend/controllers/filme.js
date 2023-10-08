@@ -10,7 +10,6 @@ async function getAllFilme(req, res) {
 }
 
 async function createFilme(req, res) {
-    console.log(req.body.data_vista)
     serFilme.createFilme(req.headers, req.body).then(value => {
         res.status(value.code).send(value.info);
     })

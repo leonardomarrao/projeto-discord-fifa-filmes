@@ -63,7 +63,6 @@ async function createFilme(headers, filme) {
                 filme.id_user = value.user.id_user
 
                 if(filme.data_vista == null) {
-                    console.log("entrou aqui")
                     let data = new Date().toLocaleDateString();
                     let dias = data.split('/')[0];
                     let mes = data.split('/')[1];
